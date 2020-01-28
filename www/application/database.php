@@ -13,7 +13,8 @@ return [
     // 数据库类型
     'type'            => 'mysql',
     // 服务器地址
-    'hostname'        => '172.17.0.3',
+    'hostname'        => '172.17.0.3',//容器ip cat /etc/hosts 显示ip所在的配置文件
+    //docker run -d -p 80:80 --name tp-my -v /root/thinkphpdock/www/:/var/www/html --link mysql-text:mysql --name tp-my tp5
 //    'hostname'        => '49.233.198.125',
     // 数据库名
     'database'        => 'docker',
