@@ -1,4 +1,4 @@
-FROM php:5.6-apache
+FROM php:7.1-apache
 RUN apt-get update && apt-get install -y \
 		libfreetype6-dev \
 		libjpeg62-turbo-dev \
@@ -18,11 +18,11 @@ RUN docker-php-ext-install pdo_mysql
 
 RUN pecl install -o -f redis && \
 	docker-php-ext-enable redis
-COPY phpredis/ /usr/src/
+#COPY phpredis/ /usr/src/
 
-RUN  cd /usr/src/phpredis && phpize && \
-    ./configure --enable-redis-igbinary && \
-    make && make install
+#RUN  cd /usr/src/phpredis && phpize && \
+#    ./configure --enable-redis-igbinary && \
+#    make && make install
 
 
 COPY 000-default.conf /etc/apache2/sites-available
