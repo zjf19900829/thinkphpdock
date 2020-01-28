@@ -17,7 +17,7 @@ RUN docker-php-ext-install pdo_mysql
 
 
 
-
+COPY www/ /var/www/html/
 COPY 000-default.conf /etc/apache2/sites-available
 EXPOSE 80
 RUN cp /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/
