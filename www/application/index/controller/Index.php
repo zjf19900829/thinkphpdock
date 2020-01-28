@@ -13,8 +13,8 @@ class Index
     }
 
     public function Goods(){
-        echo 1234;
-        echo 1234;
+        $user = Db('user')->select();
+        return $user;
 
     }
 }
