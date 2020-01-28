@@ -14,7 +14,7 @@ class Index
 
     public function Goods(){
         $user = Db('user')->select();
-        return $user;
+        return json($user);
 
     }
 }
