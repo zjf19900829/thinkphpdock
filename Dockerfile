@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
 RUN docker-php-ext-install pdo_mysql
 
 WORKDIR /usr/local/src
-RUN wget http://pecl.php.net/get/redis-3.1.6.tgz && tar -xf redis-3.1.6.tgz && rm -rf redis-3.1.6.tgz && cd redis-3.1.6 && /usr/bin/phpize && ./configure --with-php-config=/usr/bin/php-config && make install && echo "extension=\"redis.so\"" >> /etc/php.ini && rm -rf /var/cache/yum && rm -rf /usr/local/src/*
+RUN curl http://pecl.php.net/get/redis-3.1.6.tgz && tar -xf redis-3.1.6.tgz && rm -rf redis-3.1.6.tgz && cd redis-3.1.6 && /usr/bin/phpize && ./configure --with-php-config=/usr/bin/php-config && make install && echo "extension=\"redis.so\"" >> /etc/php.ini && rm -rf /var/cache/yum && rm -rf /usr/local/src/*
 
 
 #RUN pecl install -o -f redis && \
