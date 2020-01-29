@@ -6,17 +6,17 @@ RUN apt-get update && apt-get install -y \
 		libpng-dev \
 	&& docker-php-ext-install -j$(nproc) iconv mcrypt \
 	&& docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-	&& docker-php-ext-install -j$(nproc) gd
+	&& docker-php-ext-install -j$(nproc) gd \
+	&& pecl install -o -f redis  \
+    && docker-php-ext-enable redis \
+    && docker-php-ext-install pdo_mysql
 
 #RUN apt-get update && apt-get install -y libmemcached-dev zlib1g-dev \
 #	&& pecl install memcached-2.2.0 \
 #	&& docker-php-ext-enable memcached
 
 
-RUN docker-php-ext-install pdo_mysql
 
-WORKDIR /usr/local/src
-RUN curl http://pecl.php.net/get/redis-3.1.6.tgz && tar -xf redis-3.1.6.tgz && rm -rf redis-3.1.6.tgz && cd redis-3.1.6 && /usr/bin/phpize && ./configure --with-php-config=/usr/bin/php-config && make install && echo "extension=\"redis.so\"" >> /etc/php.ini && rm -rf /var/cache/yum && rm -rf /usr/local/src/*
 
 
 #RUN pecl install -o -f redis && \
