@@ -23,6 +23,14 @@ class Index
         $sas = Cache::store('redis')->get('key1');
         return $sas;
 
+    }
+
+
+    //测试从服务器
+    public function testMysql(){
+        $rs = Db('user')->insert(['name'=>'lsk']);
+        return $rs;
+
 
     }
 }

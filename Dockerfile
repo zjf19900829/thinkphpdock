@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y \
 
 
 COPY 000-default.conf /etc/apache2/sites-available
+COPY www/ /var/www/html/
 EXPOSE 80
 RUN cp /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/
 
