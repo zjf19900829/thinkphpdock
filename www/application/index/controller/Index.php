@@ -9,7 +9,7 @@ class Index
     }
 
     public function Test(){
-        pr(111111);
+        print_r(111111);
     }
 
     public function Goods(){
