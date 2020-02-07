@@ -9,7 +9,7 @@ class Index
     }
 
     public function Test(){
-        phpinfo();
+        pr(111111);
     }
 
     public function Goods(){
