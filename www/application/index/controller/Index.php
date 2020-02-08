@@ -40,7 +40,5 @@ class Index
     public function testMysql(){
         $rs = Db('user')->insert(['name'=>'lsk']);
         return $rs;
-
-
     }
 }
