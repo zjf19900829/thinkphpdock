@@ -15,18 +15,6 @@ RUN apt-get update && apt-get install -y \
 #	&& docker-php-ext-enable memcached
 
 
-
-
-
-RUN pecl install  redis && \
-	docker-php-ext-enable redis
-#COPY phpredis/ /usr/src/
-
-#RUN  cd /usr/src/phpredis && phpize && \
-#    ./configure --enable-redis-igbinary && \
-#    make && make install
-
-
 COPY 000-default.conf /etc/apache2/sites-available
 #COPY index.php /var/www/html
 COPY www/ /var/www/html/
