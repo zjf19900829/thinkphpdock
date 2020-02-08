@@ -10,6 +10,7 @@ class Index
 
     public function Test(){
         print_r(111111);
+        print_r('asdf');
         phpinfo();
     }
 
