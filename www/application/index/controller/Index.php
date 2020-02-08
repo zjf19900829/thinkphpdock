@@ -9,8 +9,16 @@ class Index
     }
 
     public function Test(){
+        echo '<pre/>';
         print_r(111111);
+        echo '<pre/>';
+        echo '<pre>';
         print_r('asdf');
+        echo '<pre/>';
+        echo '<pre>';
+        print_r('pspsp');
+        echo '<pre/>';
+
         phpinfo();
     }
 
