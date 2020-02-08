@@ -30,7 +30,7 @@ RUN apt-get update && apt-get install -y \
 COPY 000-default.conf /etc/apache2/sites-available
 #COPY index.php /var/www/html
 COPY www/ /var/www/html/
-#RUN chmod 777 /var/www/html/runtime
+RUN chmod 777 /var/www/html/runtime
 EXPOSE 80
 RUN cp /etc/apache2/mods-available/rewrite.load /etc/apache2/mods-enabled/
 
