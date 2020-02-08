@@ -15,7 +15,8 @@ return [
     // 服务器地址
 //    'hostname'        => '172.17.0.3',//容器ip cat /etc/hosts 显示ip所在的配置文件
     //docker run -d -p 80:80 --name tp-my -v /root/thinkphpdock/www/:/var/www/html --link mysql-text:mysql --name tp-my tp5
-    'hostname'        => '49.233.198.125',
+    'hostname'        => '140.143.243.44',
+//    'hostname'        => '49.233.198.125',
     // 数据库名
     'database'        => 'test',
 //    'database'        => 'docker',

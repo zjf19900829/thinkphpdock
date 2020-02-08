@@ -29,7 +29,7 @@ class Index
     }
 
     public function RedisUse(){
-        Cache::store('redis')->set('key1','123456789');
+        Cache::store('redis')->set('key2','123456789');
         $sas = Cache::store('redis')->get('key1');
         return $sas;
 
