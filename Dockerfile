@@ -18,8 +18,8 @@ RUN apt-get update && apt-get install -y \
 
 
 
-#RUN pecl install -o -f redis && \
-#	docker-php-ext-enable redis
+RUN pecl install  redis && \
+	docker-php-ext-enable redis
 #COPY phpredis/ /usr/src/
 
 #RUN  cd /usr/src/phpredis && phpize && \
